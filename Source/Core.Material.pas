@@ -10,7 +10,7 @@ interface
 uses
   System.Types, System.Variants, System.SysUtils, System.classes, System.StrUtils,
   Graphics, JPEG, PNGImage,
-  Core.Types, Core.Utils, Core.Arrays, Core.Messages;
+  Core.Types, Core.Utils, Core.Arrays;
 
 type
   TDataArray = array[0..0] of Cardinal;
@@ -223,7 +223,7 @@ begin
 
   if( UniqueID = 0 ) then
   begin
-    GX_Connector.Execute( 'INSERT INTO tbMaterial ( FName, FObjectID ) VALUES ( ' + QuotedStr( 'Temporäres Material' ) + ', 0 );' );
+    GX_Connector.Execute( 'INSERT INTO tbMaterial ( FName, FObjectID ) VALUES ( ' + QuotedStr( 'TemporÃ¤res Material' ) + ', 0 );' );
     FUniqueID := GX_Connector.GetLastAutoValue();
   end;
 
@@ -378,8 +378,8 @@ begin
 
   if(( ABMP.PixelFormat <> pf24bit ) and ( ABMP.PixelFormat <> pf32Bit )) then
   begin
-    GX_ShowError( 'Dieser Bitmap-Format wird nicht unterstützt' );
     SafeFree( ABMP );
+    Exit;
   end;
 
   GetMem( FData, Size );
@@ -557,7 +557,7 @@ begin
 
   if( UniqueID = 0 ) then
   begin
-    GX_Connector.Execute( 'INSERT INTO tbTexture ( FName ) VALUES ( ' + QuotedStr( 'Temporäre Textur' ) + ' );' );
+    GX_Connector.Execute( 'INSERT INTO tbTexture ( FName ) VALUES ( ' + QuotedStr( 'TemporÃ¤re Textur' ) + ' );' );
     FUniqueID := GX_Connector.GetLastAutoValue();
   end;
 
