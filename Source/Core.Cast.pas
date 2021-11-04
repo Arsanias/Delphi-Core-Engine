@@ -1,3 +1,7 @@
+// Copyright (c) 2021 Arsanias
+// Distributed under the MIT software license, see the accompanying
+// file LICENSE or http://www.opensource.org/licenses/mit-license.php.
+
 unit
   Core.Cast;
 
@@ -126,7 +130,7 @@ begin
 end;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Ein Cast kann nur in einer Scene existieren. Es macht keinen Sinn, einzelne Casts abzuspeichern, weil sie abh‰ngig
+// Ein Cast kann nur in einer Scene existieren. Es macht keinen Sinn, einzelne Casts abzuspeichern, weil sie abh√§ngig
 // von einer Scene, der Position und Lage und dem Zustand dort sind. Daher sollte das Laden eines Casts aus einem
 // Projekt und einer Scene heraus geschehen. Objekte, die bereits im Projekt vorhanden ( oder geladen ) sind, werden den
 // einzelnen Casts und somit auch der Scene zugeordnet. Deshalb muss diese Objekt-Liste mitgegeben werden.
