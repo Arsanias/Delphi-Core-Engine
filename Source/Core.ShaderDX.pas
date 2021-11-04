@@ -1,3 +1,7 @@
+// Copyright (c) 2021 Arsanias
+// Distributed under the MIT software license, see the accompanying
+// file LICENSE or http://www.opensource.org/licenses/mit-license.php.
+
 unit
   Core.ShaderDX;
 
@@ -9,6 +13,7 @@ uses
   Vcl.Forms, Vcl.Dialogs,
   DXTypes_JSB, DXGI_JSB, D3DCommon_JSB, D3D11_JSB, D3DX11_JSB, D3DCompiler_JSB, D3DX10_JSB,
   Core.Types;
+  
 
 type
   TShaderDX = class
