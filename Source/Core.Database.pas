@@ -1,3 +1,7 @@
+// Copyright (c) 2021 Arsanias
+// Distributed under the MIT software license, see the accompanying
+// file LICENSE or http://www.opensource.org/licenses/mit-license.php.
+
 unit
   Core.Database;
 
@@ -207,7 +211,7 @@ var
   ConnectionParams: TStrings;
 begin
     {$IF Defined(USE_FIRE_DAC)}
-    // Erstellt eine Verbindung über MySQL FireDAC Treiber
+    // Erstellt eine Verbindung Ã¼ber MySQL FireDAC Treiber
 
     if ((ApplicationPath = '') or (UserName = '')) then
       raise Exception.Create('Verbindung zur Datenbank kann nicht aufgebaut werden. Es ist kein Pfad zur MySQl.dll angegeben oder der Benutzer ist nicht bekannt.');
@@ -258,7 +262,7 @@ begin
 
     FConnection.Connected := true;
   {$ELSE}
-    // Erstellt eine Verbindung über MySQL ADO Treiber
+    // Erstellt eine Verbindung Ã¼ber MySQL ADO Treiber
 
     if(FConnection = nil) then
     begin
@@ -417,8 +421,8 @@ begin
   try
     if( C.RecordCount > 1 ) then
     begin
-      ErrorText := 'Eine Aktualisierungsabfrage zu einem bestimmten Datensatz hätte mehrere Datensätze beschrieben, '+
-        'weshalb sie zurückgewiesen wurde.';
+      ErrorText := 'Eine Aktualisierungsabfrage zu einem bestimmten Datensatz hÃ¤tte mehrere DatensÃ¤tze beschrieben, '+
+        'weshalb sie zurÃ¼ckgewiesen wurde.';
       Exit;
     end
     else
